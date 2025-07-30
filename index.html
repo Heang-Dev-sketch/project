@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+    <link rel="stylesheet" href="/public/css/header-content.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/order.css">
+    <link rel="stylesheet" href="/public/css/finance.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+                <h3>Hello everyone | Group 1</h3>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><i class=" fas fa-envelope"></i> <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> <i class="fas fa-chevron-down"></i></a></li>
+                    <li>
+                        <div class="image">
+                            <img src="/public/image/logo.png" alt="logo" width="50px">
+                            <button popovertarget="into"><i class="fas fa-chevron-down"></i></i></button>
+
+                            <div id="into" popover class="close-btn">
+                                <button popovertarget="pf" popovertargetaction="hide">close</button>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+        <main class="content">
+            <section class="dashboard">
+                <ul>
+                    <li><a href=""><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href=""><i class="fas fa-bank"></i> Products</a></li>
+                    <li><a href=""><i class="fas fa-rotate-right"></i> Category</a></li>
+                    <li><a href=""><i class="fas fa-chart-simple"></i> Sales</a></li>
+                    <li><a href=""><i class="fas fa-wallet"></i> Reports</a></li>
+                    <li><a href=""><i class="fas fa-gear"></i> Setting</a></li>
+                </ul>
+                <div class="logout">
+
+                    <div class="btn" title="មិនអាចlogoutបានទេ!">
+                        <a href="#">
+                            <i class="fas fa-power-off"></i> Logout</a>
+                    </div>
+
+                </div>
+            </section>
+            <div class="contents">
+                <section class="cotnent-container">
+                    <div class="header-content">
+                        <ul>
+                            <li>
+                                <div class="text-content">
+                                    <h4>CUSTOMWERS</h4>
+                                    <h6>31,210</h6>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text-content">
+                                    <h4>INCOMES</h4>
+                                    <h6>$980,530</h6>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-usd"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text-content">
+                                    <h4>PRODUCTS SOLD</h4>
+                                    <h6>$25,280</h6>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--finance-->
+                <section class="finance-flow">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="left-section">
+                                <h2>Finance Flow</h2>
+                                <div class="value-section">
+                                    <p class="amount">$52,210</p>
+                                    <p class="date">August 2025</p>
+                                </div>
+                            </div>
+
+                            <div class="right-section">
+                                <svg class="chart" viewBox="0 0 550 250" preserveAspectRatio="xMidYMid meet">
+                                    <!-- Y-axis labels -->
+                                    <g class="y-labels">
+                                        <text x="0" y="8">$60,000.00</text>
+                                        <text x="0" y="43">$50,000.00</text>
+                                        <text x="0" y="78">$40,000.00</text>
+                                        <text x="0" y="113">$30,000.00</text>
+                                        <text x="0" y="148">$20,000.00</text>
+                                        <text x="0" y="183">$10,000.00</text>
+                                        <text x="0" y="215">$0.00</text>
+                                    </g>
+
+                                    <!-- Grid lines -->
+                                    <g transform="translate(70, 0)">
+                                        <line x1="0" y1="5" x2="430" y2="5" />
+                                        <line x1="0" y1="40" x2="430" y2="40" />
+                                        <line x1="0" y1="75" x2="430" y2="75" />
+                                        <line x1="0" y1="110" x2="430" y2="110" />
+                                        <line x1="0" y1="145" x2="430" y2="145" />
+                                        <line x1="0" y1="180" x2="430" y2="180" />
+                                        <line x1="0" y1="215" x2="430" y2="215" />
+                                        <line x1="0" y1="235" x2="430" y2="235" />>
+
+                                        <!-- Data Line -->
+                                        <polyline fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" points="
+                  20,178
+                  70,211
+                  120,153
+                  170,110
+                  220,110
+                  270,73
+                  320,55
+                  370,30
+                " />
+                                    </g>
+
+                                    <!-- X-axis labels -->
+                                    <g class="x-labels" transform="translate(70, 220)">
+                                        <text x="0" y="10">January</text>
+                                        <text x="55" y="10">February</text>
+                                        <text x="115" y="10">March</text>
+                                        <text x="170" y="10">April</text>
+                                        <text x="220" y="10">May</text>
+                                        <text x="265" y="10">June</text>
+                                        <text x="315" y="10">July</text>
+                                        <text x="360" y="10">August</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--order-->
+                <section class="
+            order-content">
+                    <div class="recent">
+                        <h2>Recent Orders</h2>
+                    </div>
+                    <div class="table-order">
+                        <table>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Quanity</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>RTX 5090</th>
+                                <th>30</th>
+                                <th><span class="pendding">pendding</span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>2</th>
+                                <th>ASUS Monitor</th>
+                                <th>25</th>
+                                <th><span class="Approved">
+                                        Approved
+                                    </span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>3</th>
+                                <th>Mainboard</th>
+                                <th>20</th>
+                                <th><span class="Approved">
+                                        Approved
+                                    </span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>4</th>
+                                <th>CPU</th>
+                                <th>15</th>
+                                <th><span class="pendding">pendding</span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>5</th>
+                                <th>RAM</th>
+                                <th>12</th>
+                                <th><span class="Approved">
+                                        Approved
+                                    </span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>6</th>
+                                <th>SSD</th>
+                                <th>16</th>
+                                <th><span class="pendding">pendding</span></th>
+                                <th><span class="edit">
+                                        <i class="fas fa-pen-to-square"></i>
+                                    </span>
+                                    <span class="trah">
+                                        <i class="fas fa-trash-can"></i>
+                                    </span>
+                                </th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+            
+
+        </main>
+    </div>
+    <footer>
+        <div class="group">
+            <div class="right">
+                <img src="/public/image/logo.png" alt="footer-logo" width="50px">
+                <a href="#"><h2><i class="fas fa-chevron-up"></i> Go to top</h2></a>
+                <a href="#"><i class="fas fa-info"></i> About us</a>
+            </div>
+            <div class="center">
+                <h2>Member:</h2>
+                <p><i class="fas fa-circle-user"></i> Limheang</p>
+                <p><i class="fas fa-circle-user"></i> Sing</p>
+                <p><i class="fas fa-circle-user"></i> Sineng</p>
+                <p><i class="fas fa-circle-user"></i> Lymeng</p>
+                <p><i class="fas fa-circle-user"></i> Makara</p>
+                <p><i class="fas fa-circle-user"></i> Rom</p>
+            </div>
+            <div class="left">
+                <h4><i class="fas fa-code"></i> Made by group 1</h4>
+                <h4><i class="fas fa-building"></i> Koh kong</h4>
+                <h4><i class="fas fa-user"></i> hong bunleap</h4>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Group 1, All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

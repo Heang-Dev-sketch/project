@@ -1,0 +1,36 @@
+.group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    /* background-image: url(/public/image/footer.jpg); */
+    background-color: rgb(3, 3, 87);
+    background-size: cover;
+    backdrop-filter: blur(30px);
+}
+.footer-bottom{
+    padding: 20px;
+    text-align: center;
+}
+.group .left, .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.group .right a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.group .left, .right, .center{
+    margin-top: 10px;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+}
+html{
+    scroll-behavior: smooth;
+}

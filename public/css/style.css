@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oxygen", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+.container {
+    background-image: url(/public/image/bg.png);
+    background-size: cover;
+    color: white;
+    flex-grow: 1;
+}
+
+body {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container .header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    padding: 30px;
+    justify-content: space-around;
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+
+}
+
+.container .header .logo {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.container .header .logo i {
+    font-size: 40px;
+}
+
+.container .header .logo h3 {
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 15px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.container .header .logo h3:hover{
+    transition: 0.2s ease;
+    transform: translate3d(20px, 10px, 10px);
+    box-shadow: 0 0 10px black;
+}
+
+.container .header .menu ul {
+    display: flex;
+    flex-wrap: 1;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.container .header .menu .image{
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    padding: 0 23px;
+    color: black;
+}
+    
+.container .header .menu ul li a {
+    color: black;
+    background-color: white;
+    padding: 0 5px 0;
+    border-radius: 20px;
+}
+[popover] {
+    border: 1px solid red;
+    padding: 10px;
+    align-items: center;
+    justify-content: end;
+}

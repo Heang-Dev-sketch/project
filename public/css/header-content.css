@@ -1,0 +1,33 @@
+.container .cotnent-container .header-content ul {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container .cotnent-container .header-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.container .cotnent-container .header-content .contents{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .cotnent-container .header-content ul li {
+    list-style: none;
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+    flex-grow: 1;
+    padding: 15px;
+    backdrop-filter: blur(30px);
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.281),
+    inset 0 2px 10px white;
+    transition: 0.25s ease-in-out;
+}
+.container .cotnent-container .header-content ul li:hover{
+    transition: 0.25s ease-in-out;
+    transform: scale(1.02);
+}

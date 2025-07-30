@@ -1,0 +1,32 @@
+.contents .order-content{
+    backdrop-filter: blur(30px);
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;    
+    box-shadow: 2px 4px 12px rgba(255, 255, 255, 0.521);
+}
+.contents .order-content .table-order table{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 20px;
+}
+.contents .order-content .table-order tr, th{
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+}
+.contents .order-content .table-order{
+    padding: 20px;
+}
+.contents .order-content .table-order table .edit{
+    color: orange;
+}
+.contents .order-content .table-order table .trah{
+    color: red;
+}
+.contents .order-content .table-order table .pendding{
+    color: red;
+}
+.contents .order-content .table-order table .Approved{
+    color: green;
+}

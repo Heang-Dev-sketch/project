@@ -1,0 +1,83 @@
+.card {
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(255, 255, 255, 0.521);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .card-content {
+        flex-direction: row;
+    }
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .left-section {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+.left-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.value-section {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.amount {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.date {
+    font-size: 10px;
+    color: white;
+}
+
+.right-section {
+    flex: 4;
+    height: 220px;
+}
+
+.chart {
+    width: 100%;
+    backdrop-filter: blur(20px);
+}
+
+.y-labels text,
+.x-labels text {
+    font-size: 0.55rem;
+    fill: white;
+    font-weight: 650;
+}
+
+.y-labels text {
+    fill: red;
+    font-size: 10px;
+}
+
+line {
+    stroke: #e5e7eb;
+    stroke-width: 1;
+}
