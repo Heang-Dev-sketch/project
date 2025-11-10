@@ -1,306 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="km">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/public/css/dashboard.css">
-    <link rel="stylesheet" href="/public/css/header-content.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/footer.css">
-    <link rel="stylesheet" href="/public/css/order.css">
-    <link rel="stylesheet" href="/public/css/finance.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Document</title>
+    <title>Converting-kh - ទំព័រដើម</title>
+    <!-- ភ្ជាប់ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ប្រើ Font 'Kantumruy Pro' ពី Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        /* អនុវត្ត Font ទៅលើទំព័រទាំងមូល */
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+<body class="bg-gray-100">
 
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <i class="fas fa-database"></i>
-                <h3>Hello everyone | Group 1</h3>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#"><i class=" fas fa-envelope"></i> <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#"><i class="fas fa-bell"></i> <i class="fas fa-chevron-down"></i></a></li>
-                    <li>
-                        <div class="image">
-                            <img src="/public/image/logo.png" alt="logo" width="50px">
-                            <button popovertarget="into"><i class="fas fa-chevron-down"></i></i></button>
-
-                            <div id="into" popover class="close-btn">
-                                <button popovertarget="pf" popovertargetaction="hide">close</button>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </header>
-        <main class="content">
-            <section class="dashboard">
-                <ul>
-                    <li><a href=""><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li><a href=""><i class="fas fa-bank"></i> Products</a></li>
-                    <li><a href=""><i class="fas fa-rotate-right"></i> Category</a></li>
-                    <li><a href=""><i class="fas fa-chart-simple"></i> Sales</a></li>
-                    <li><a href=""><i class="fas fa-wallet"></i> Reports</a></li>
-                    <li><a href=""><i class="fas fa-gear"></i> Setting</a></li>
-                </ul>
-                <div class="logout">
-
-                    <div class="btn" title="មិនអាចlogoutបានទេ!">
-                        <a href="#">
-                            <i class="fas fa-power-off"></i> Logout</a>
-                    </div>
-
+    <!-- 1. ផ្នែក Menu Bar (Navigation) -->
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- ផ្នែកខាងឆ្វេង (Logo/Brand) -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">
+                        Converting-kh
+                    </a>
                 </div>
-            </section>
-            <div class="contents">
-                <section class="cotnent-container">
-                    <div class="header-content">
-                        <ul>
-                            <li>
-                                <div class="text-content">
-                                    <h4>CUSTOMWERS</h4>
-                                    <h6>31,210</h6>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text-content">
-                                    <h4>INCOMES</h4>
-                                    <h6>$980,530</h6>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-usd"></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text-content">
-                                    <h4>PRODUCTS SOLD</h4>
-                                    <h6>$25,280</h6>
-                                </div>
-                                <div class="icon-content">
-                                    <i class="fas fa-chart-bar"></i>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
 
-                <!--finance-->
-                <section class="finance-flow">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="left-section">
-                                <h2>Finance Flow</h2>
-                                <div class="value-section">
-                                    <p class="amount">$52,210</p>
-                                    <p class="date">August 2025</p>
-                                </div>
-                            </div>
+                <!-- ផ្នែកខាងស្តាំ (Menu សម្រាប់ Desktop) -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-900 font-semibold hover:text-blue-600 transition-colors">ទំព័រដើម</a>
+                    <a href="converting-kh.html" class="text-gray-500 hover:text-blue-600 transition-colors">បម្លែងវីដេអូ</a>
+                    <a href="#features" class="text-gray-500 hover:text-blue-600 transition-colors">លក្ខណៈពិសេស</a>
+                    <!-- ប៊ូតុង Call to Action -->
+                    <a href="converting-kh.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        ចាប់ផ្តើមបម្លែង
+                    </a>
+                </div>
 
-                            <div class="right-section">
-                                <svg class="chart" viewBox="0 0 550 250" preserveAspectRatio="xMidYMid meet">
-                                    <!-- Y-axis labels -->
-                                    <g class="y-labels">
-                                        <text x="0" y="8">$60,000.00</text>
-                                        <text x="0" y="43">$50,000.00</text>
-                                        <text x="0" y="78">$40,000.00</text>
-                                        <text x="0" y="113">$30,000.00</text>
-                                        <text x="0" y="148">$20,000.00</text>
-                                        <text x="0" y="183">$10,000.00</text>
-                                        <text x="0" y="215">$0.00</text>
-                                    </g>
-
-                                    <!-- Grid lines -->
-                                    <g transform="translate(70, 0)">
-                                        <line x1="0" y1="5" x2="430" y2="5" />
-                                        <line x1="0" y1="40" x2="430" y2="40" />
-                                        <line x1="0" y1="75" x2="430" y2="75" />
-                                        <line x1="0" y1="110" x2="430" y2="110" />
-                                        <line x1="0" y1="145" x2="430" y2="145" />
-                                        <line x1="0" y1="180" x2="430" y2="180" />
-                                        <line x1="0" y1="215" x2="430" y2="215" />
-                                        <line x1="0" y1="235" x2="430" y2="235" />>
-
-                                        <!-- Data Line -->
-                                        <polyline fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" points="
-                  20,178
-                  70,211
-                  120,153
-                  170,110
-                  220,110
-                  270,73
-                  320,55
-                  370,30
-                " />
-                                    </g>
-
-                                    <!-- X-axis labels -->
-                                    <g class="x-labels" transform="translate(70, 220)">
-                                        <text x="0" y="10">January</text>
-                                        <text x="55" y="10">February</text>
-                                        <text x="115" y="10">March</text>
-                                        <text x="170" y="10">April</text>
-                                        <text x="220" y="10">May</text>
-                                        <text x="265" y="10">June</text>
-                                        <text x="315" y="10">July</text>
-                                        <text x="360" y="10">August</text>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--order-->
-                <section class="
-            order-content">
-                    <div class="recent">
-                        <h2>Recent Orders</h2>
-                    </div>
-                    <div class="table-order">
-                        <table>
-                            <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th>Quanity</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                            <tr>
-                                <th>1</th>
-                                <th>RTX 5090</th>
-                                <th>30</th>
-                                <th><span class="pendding">pendding</span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>2</th>
-                                <th>ASUS Monitor</th>
-                                <th>25</th>
-                                <th><span class="Approved">
-                                        Approved
-                                    </span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>3</th>
-                                <th>Mainboard</th>
-                                <th>20</th>
-                                <th><span class="Approved">
-                                        Approved
-                                    </span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>4</th>
-                                <th>CPU</th>
-                                <th>15</th>
-                                <th><span class="pendding">pendding</span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>5</th>
-                                <th>RAM</th>
-                                <th>12</th>
-                                <th><span class="Approved">
-                                        Approved
-                                    </span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>6</th>
-                                <th>SSD</th>
-                                <th>16</th>
-                                <th><span class="pendding">pendding</span></th>
-                                <th><span class="edit">
-                                        <i class="fas fa-pen-to-square"></i>
-                                    </span>
-                                    <span class="trah">
-                                        <i class="fas fa-trash-can"></i>
-                                    </span>
-                                </th>
-                            </tr>
-
-                        </table>
-                    </div>
-                </section>
-
-            </div>
-
-            
-
-        </main>
-    </div>
-    <footer>
-        <div class="group">
-            <div class="right">
-                <img src="/public/image/logo.png" alt="footer-logo" width="50px">
-                <a href="#"><h2><i class="fas fa-chevron-up"></i> Go to top</h2></a>
-                <a href="#"><i class="fas fa-info"></i> About us</a>
-            </div>
-            <div class="center">
-                <h2>Member:</h2>
-                <p><i class="fas fa-circle-user"></i> Limheang</p>
-                <p><i class="fas fa-circle-user"></i> Sing</p>
-                <p><i class="fas fa-circle-user"></i> Sineng</p>
-                <p><i class="fas fa-circle-user"></i> Lymeng</p>
-                <p><i class="fas fa-circle-user"></i> Makara</p>
-                <p><i class="fas fa-circle-user"></i> Rom</p>
-            </div>
-            <div class="left">
-                <h4><i class="fas fa-code"></i> Made by group 1</h4>
-                <h4><i class="fas fa-building"></i> Koh kong</h4>
-                <h4><i class="fas fa-user"></i> hong bunleap</h4>
+                <!-- ប៊ូតុងសម្រាប់ Mobile Menu (Hamburger) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-open-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            <path id="menu-close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Group 1, All rights reserved.</p>
+
+        <!-- Mobile Menu (បង្ហាញពេលចុចប៊ូតុង) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-900 bg-gray-100">ទំព័រដើម</a>
+                <a href="converting-kh.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">បម្លែងវីដេអូ</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">លក្ខណៈពិសេស</a>
+            </div>
+            <!-- ប៊ូតុង Call to Action ក្នុង Mobile -->
+            <div class="px-4 pb-4">
+                <a href="converting-kh.html" class="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    ចាប់ផ្តើមបម្លែង
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. ផ្នែក Hero (ផ្ទាំងស្វាគមន៍) -->
+    <!-- ប្រើ pt-16 (padding-top) ដើម្បីកុំឲ្យមាតិកានៅក្រោម Menu Bar -->
+    <header class="bg-white pt-16">
+        <div class="max-w-6xl mx-auto py-20 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                បម្លែងវីដេអូទៅជា MP3 ឬ MP4 <br class="hidden md:inline">
+                <span class="text-blue-600">លឿន និង ឥតគិតថ្លៃ</span>
+            </h1>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                សេវាកម្មងាយស្រួលប្រើសម្រាប់តម្រូវការបម្លែងឯកសារវីដេអូរបស់អ្នក។ មិនចាំបាច់ដំឡើងកម្មវិធី គ្រាន់តែ upload ហើយទាញយក។
+            </p>
+            <div class="mt-10">
+                <a href="converting-kh.html" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition-transform transform hover:-translate-y-1 shadow-lg">
+                    សាកល្បងឥឡូវនេះ
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. ផ្នែកលក្ខណៈពិសេស (Features) -->
+    <section id="features" class="bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">លក្ខណៈពិសេសចម្បង</h2>
+                <p class="mt-2 text-gray-600">ហេតុអ្វីអ្នកគួរជ្រើសរើស Converting-kh?</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: High Quality -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <!-- Icon (ឧទាហរណ៍) -->
+                    <svg class="h-12 w-12 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">គុណភាពខ្ពស់</h3>
+                    <p class="text-gray-600 mt-2">រក្សាគុណភាពសំឡេង និង រូបភាព ក្រោយពេលបម្លែង។</p>
+                </div>
+
+                <!-- Feature 2: Fast Conversion -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <!-- Icon (ឧទាហរណ៍) -->
+                    <svg class="h-12 w-12 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">ដំណើរការលឿន</h3>
+                    <p class="text-gray-600 mt-2">ម៉ាស៊ីនបម្រើ (Server) របស់យើងបម្លែងឯកសារបានលឿនរហ័ស។</p>
+                </div>
+
+                <!-- Feature 3: Free & Secure -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <!-- Icon (ឧទាហរណ៍) -->
+                    <svg class="h-12 w-12 text-blue-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-900 mt-4">សុវត្ថិភាព និង ឥតគិតថ្លៃ</h3>
+                    <p class="text-gray-600 mt-2">ឯកសាររបស់អ្នកនឹងត្រូវលុបចោល បន្ទាប់ពី 1 ម៉ោង។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ផ្នែក Footer (បាតទំព័រ) -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Converting-kh. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-white">គោលការណ៍ឯកជនភាព</a>
+                <a href="#" class="hover:text-white">លក្ខខណ្ឌប្រើប្រាស់</a>
+            </div>
         </div>
     </footer>
-</body>
 
+
+    <script>
+        // JavaScript សម្រាប់គ្រប់គ្រង Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            // បិទ/បើក Menu
+            mobileMenu.classList.toggle('hidden');
+            
+            // ដូរ Icon (Hamburger / Close)
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        // (បន្ថែម) បិទ Menu ពេលចុចលើ Link (សម្រាប់ទូរស័ព្ទ)
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+                menuOpenIcon.classList.remove('hidden');
+                menuCloseIcon.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
 </html>
